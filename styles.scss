@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'Segoe Ui';
+    src: url('assets/fonts/segoe-ui.ttf');
+}
+
+@font-face {
+    font-family: 'Arial Rounded';
+    src: url('assets/fonts/arial-rounded.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    color: white;
+    font-family: 'Segoe UI';
+    border: none;
+
+    body {
+        background-color: #252525;
+        overflow-x: hidden;
+    }
+}
+
+.default * {
+    font-size: 12pt;
+}
+
+.mobile * {
+    font-size: 15pt;
+}
