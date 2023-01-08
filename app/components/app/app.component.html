@@ -1,0 +1,64 @@
+<div class="default" *ngIf="ls.default">
+  <main>
+    <nav class="top-nav">
+      <div class="poly top">
+        <div class="button-bar top">
+          <button (click)="open('discord.gg/RFRwjqr2hC')" class="btn">
+            <div class="content">
+              <div class="discord logo"></div>
+              Discord
+            </div>
+            <div class="line"></div>
+          </button>
+          <button (click)="open('github.com/IXX07')" class="btn">
+            <div class="content">
+              <div class="github logo"></div>
+              GitHub
+            </div>
+            <div class="line"></div>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <div class="text-ctn">
+      <div>
+        <header>Mua Entertainment</header>
+        <div class="description">KOSTENLOSE APPS UND SPIELE</div>
+      </div>
+    </div>
+    <nav class="bottom-nav">
+      <div class="poly bottom"></div>
+    </nav>
+  </main>
+  <div class="ctn">
+    <app-program name="VTubeMua"></app-program>
+    <app-program name="Mualuenie"></app-program>
+    <app-program name="Conquest Of The Universe"></app-program>
+  </div>
+</div>
+<div class="mobile" *ngIf="!ls.default">
+  <main [class]="mainClassName">
+    <nav class="top-nav">
+      <div class="poly top">
+        <div class="button-bar top">
+          <button (click)="open('discord.gg/RFRwjqr2hC')" class="discord btn"></button>
+          <button (click)="open('github.com/IXX07')" class="github btn"></button>
+        </div>
+      </div>
+    </nav>
+    <div class="text-ctn">
+      <div>
+        <header>Mua Entertainment</header>
+        <div class="description">KOSTENLOSE APPS UND SPIELE</div>
+      </div>
+    </div>
+    <nav class="bottom-nav">
+      <div class="poly bottom"></div>
+    </nav>
+  </main>
+  <div class="ctn">
+    <app-program name="VTubeMua"></app-program>
+    <app-program name="Mualuenie"></app-program>
+    <app-program name="Conquest Of The Universe"></app-program>
+  </div>
+</div>

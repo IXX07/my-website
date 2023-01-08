@@ -1,0 +1,118 @@
+.mobile {
+    .main {
+        margin: 50px;
+        width: 90vw;
+        filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.658));
+    
+        .poly {
+            width: 100%;
+            background-color: rgb(20, 20, 20);
+            padding: 1px;
+            clip-path: polygon(
+                10px 0, 60px 0, 70px 10px, calc(100% - 70px) 10px, calc(100% - 60px) 0, calc(100% - 10px) 0, 100% 10px, 100% 60px,
+                calc(100% - 10px) 70px, calc(100% - 10px) calc(100% - 70px), 100% calc(100% - 60px), 100% calc(100% - 10px), calc(100% - 10px) 100%,
+                calc(100% - 60px) 100%, calc(100% - 70px) calc(100% - 10px), 70px calc(100% - 10px), 60px 100%, 10px 100%, 0 calc(100% - 10px),
+                0 calc(100% - 60px), 10px calc(100% - 70px), 10px 70px, 0 60px, 0 10px
+            );
+    
+            .content {
+                margin: 40px;
+    
+                header {
+                    font-size: 20pt;
+                    font-family: 'Arial Rounded';
+                    text-align: center;
+                    color: rgb(188, 223, 255);
+                }
+    
+                .description {
+                    margin-top: 20px;
+                    text-align: center;
+                }
+    
+                .buttons-row {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-top: 30px;
+                    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.658));
+    
+                    button {
+                        background-color: rgb(15, 103, 175);
+                        clip-path: polygon(5px 0, calc(100% - 5px) 0, 100% 5px, 100% calc(100% - 5px), calc(100% - 5px) 100%, 5px 100%, 0 calc(100% - 5px), 0 5px);
+                        padding: 10px;
+                        width: 240px;
+                        display: flex;
+                        justify-content: center;
+                        transition: 0.4s;
+                        margin: 5px;
+    
+                        &.disabled {
+                            background-color: gray;
+                        }
+    
+                        &:hover:not(.disabled) {
+                            background-color: rgb(73, 153, 219);
+                            clip-path: polygon(0 0, 100% 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 100%, 0 0);
+                            border-radius: 20px;
+                        }
+    
+                        .logo {
+                            width: 36px;
+                            height: 36px;
+                            margin: -3px 10px -3px -3px;
+                            background-size: cover;
+    
+                            &.github {
+                                background-image: url('../../../assets/img/github.png');
+                            }
+    
+                            &.replit {
+                                background-image: url('../../../assets/img/replit.png');
+                            }
+                        }
+                    }
+                }
+    
+                .details-nav {
+                    .details {                   
+                        margin-top: 20px;
+                        clip-path: polygon(15px 0, calc(100% - 15px) 0, 100% 15px, 100% calc(100% - 15px), calc(100% - 15px) 100%, 15px 100%, 0 calc(100% - 15px), 0 15px);
+                        background-color: rgb(34, 34, 34);
+                        padding: 20px;
+    
+                        .detail {
+                            display: flex;
+    
+                            .det {
+                                width: 50%;
+                                margin: 3px 6px 3px 3px;
+    
+                                &.property {
+                                    text-align: right;
+                                    color: rgb(216, 255, 253);
+                                }
+    
+                                &.value {
+                                    color: rgb(255, 252, 203);
+                                    font-style: italic;
+                                }
+                            }
+
+                            &.minimized {
+                                display: block;
+                                margin: 7px 0 7px;
+
+                                .det {
+                                    width: 100%;
+                                    text-align: center;
+                                    margin: -1px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,119 @@
+.default {
+    main {
+        background-image: url('../../../assets/img/background.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    
+        nav {
+            &.top-nav {
+                filter: drop-shadow(0 2px 2px rgba(27, 27, 27, 0.493));
+            }
+    
+            &.bottom-nav {
+                filter: drop-shadow(0 -2px 2px rgba(27, 27, 27, 0.493));
+                margin-bottom: -1px;
+            }
+    
+            .poly {
+                height: 100px;
+                width: 100%;
+                background-color: #252525;
+        
+                &.top {
+                    clip-path: polygon(0 0, 100vw 0, 100vw 100px, 93vw 83px, 87vw 93px, 80vw 81px, 77vw 88px, 72vw 76px, 50vw 60px, 30vw 62px, 0 50px);
+                }
+        
+                &.bottom {
+                    clip-path: polygon(0 0, 7vw 17px, 13vw 7px, 20vw 19px, 23vw 12px, 28vw 24px, 50vw 40px, 70vw 38px, 100vw 50px, 100vw 100px, 0 100px);
+                }
+            }
+    
+            .button-bar {
+                position: absolute;
+                display: flex;
+                width: calc(100vw - 50px);
+                justify-content: right;
+                margin-right: 50px;
+                margin-top: 25px;
+    
+                .btn {
+                    margin-left: 25px;
+                    cursor: pointer;
+    
+                    .content {
+                        display: flex;
+                        justify-content: center;
+                        margin-left: -5px;
+    
+                        .logo {
+                            width: 25px;
+                            height: 30px;
+                            background-size: 25px;
+                            background-repeat: no-repeat;
+                            margin: -5px 6px 3px;
+    
+                            &.github {
+                                background-image: url('../../../assets/img/github.png');
+                                background-position-y: 2px;
+                            }
+    
+                            &.discord {
+                                background-image: url('../../../assets/img/discord.png');
+                                background-position-y: 5px;
+                            }
+                        }
+                    }
+        
+                    .line {
+                        transition: 0.4s ease-out;
+                        height: 2px;
+                        background-color: white;
+                        width: 0;
+                        margin-top: 2px;
+                        margin-left: 50%;
+                    }
+        
+                    &:hover {
+                        .line {
+                            width: 100%;
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+        }
+    
+        .text-ctn {
+            display: flex;
+            justify-content: center;
+    
+            header {
+                color: rgb(255, 215, 36);
+                font-size: 40pt;
+                font-family: 'Arial Rounded';
+                text-shadow: 2px 2px #535353;
+                text-align: center;
+            }
+    
+            .description {
+                text-align: center;
+                text-shadow: 2px 2px #535353;
+                color: rgb(255, 223, 135);
+                font-size: 16pt;
+                font-family: 'Arial Rounded';
+                margin-top: 20px;
+            }
+        }
+    }
+    
+    .ctn {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        align-items: center;
+    }
+}

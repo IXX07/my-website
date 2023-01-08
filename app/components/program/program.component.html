@@ -1,0 +1,63 @@
+<div class="default" *ngIf="ls.default">
+    <nav class="main">
+        <div class="poly">
+            <div class="content">
+                <header>{{ name }}</header>
+                <div class="description">{{p.description}}</div>
+                <div class="buttons-row">
+                    <button [class]="repBtnClassName" (click)="openRep()">
+                        <div class="github logo" *ngIf="p['repository']"></div>
+                        <div class="replit logo" *ngIf="p['repl']"></div>
+                        {{ codeBtnName }}
+                    </button>
+                    <button (click)="open(p)">{{ p['link'] ? 'einladen' : 'herunterladen' }}</button>
+                </div>
+                <nav class="details-nav">
+                    <div class="details-ctn">
+                        <div class="details">
+                            <div class="detail" *ngFor="let x of p.details1">
+                                <p class="property det">{{ x.split('=')[0] }}:
+                                </p>
+                                <p class="value det">{{ x.split('=')[1] }}</p>
+                            </div>
+                        </div>
+                        <div class="details">
+                            <div class="detail" *ngFor="let x of p.details2">
+                                <p class="property det">{{ x.split('=')[0] }}:
+                                </p>
+                                <p class="value det">{{ x.split('=')[1] }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </nav>
+</div>
+<div class="mobile" *ngIf="!ls.default">
+    <nav class="main">
+        <div class="poly">
+            <div class="content">
+                <header>{{ name }}</header>
+                <div class="description">{{p.description}}</div>
+                <div class="buttons-row">
+                    <button [class]="repBtnClassName" (click)="openRep()">
+                        <div class="github logo" *ngIf="p['repository']"></div>
+                        <div class="replit logo" *ngIf="p['repl']"></div>
+                        {{ codeBtnName }}
+                    </button>
+                    <button (click)="open(p)">{{ p['link'] ? 'einladen' : 'herunterladen' }}</button>
+                </div>
+                <nav class="details-nav">
+                    <div class="details">
+                        <div [class]="'detail ' + detailClassName" *ngFor="let x of p.details1.concat(p.details2)">
+                            <p class="property det">{{ x.split('=')[0] }}:
+                            </p>
+                            <p class="value det">{{ x.split('=')[1] }}</p>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </nav>
+</div>

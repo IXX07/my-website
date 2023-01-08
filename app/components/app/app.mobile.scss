@@ -1,0 +1,95 @@
+.mobile {
+    main {
+        background-image: url('../../../assets/img/background.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &.landscape {
+            height: 150vh;
+        }
+    
+        nav {
+            &.top-nav {
+                filter: drop-shadow(0 2px 2px rgba(27, 27, 27, 0.493));
+            }
+    
+            &.bottom-nav {
+                filter: drop-shadow(0 -2px 2px rgba(27, 27, 27, 0.493));
+                margin-bottom: -1px;
+            }
+    
+            .poly {
+                height: 100px;
+                width: 100vw;
+                background-color: #252525;
+        
+                &.top {
+                    clip-path: polygon(0 0, 100% 0, 100% 100%, 90% 83%, 78% 93%, 69% 81%, 61% 88%, 52% 76%, 40% 80%, 26% 60%, 20% 70%, 0 83%);
+                }
+        
+                &.bottom {
+                    clip-path: polygon(0 0, 7% 17%, 13% 7%, 20% 19%, 23% 12%, 28% 24%, 50% 40%, 70% 38%, 100% 50%, 100% 100%, 0 100%);
+                }
+            }
+    
+            .button-bar {
+                position: absolute;
+                display: flex;
+                width: 100%;
+                justify-content: right;
+                margin-top: 20px;
+    
+                .btn {
+                    width: 40px;
+                    height: 40px;
+                    background-size: 40px;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    margin-right: 20px;
+
+                    &.discord {
+                        background-image: url('../../../assets/img/discord.png');
+
+                    }
+
+                    &.github {
+                        background-image: url('../../../assets/img/github.png');
+                    }
+                }
+            }
+        }
+    
+        .text-ctn {
+            display: flex;
+            justify-content: center;
+    
+            header {
+                color: rgb(255, 215, 36);
+                font-size: 30pt;
+                font-family: 'Arial Rounded';
+                text-shadow: 2px 2px #535353;
+                text-align: center;
+            }
+    
+            .description {
+                text-align: center;
+                text-shadow: 2px 2px #535353;
+                color: rgb(255, 223, 135);
+                font-size: 16pt;
+                font-family: 'Arial Rounded';
+                margin-top: 20px;
+            }
+        }
+    }
+    
+    .ctn {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        align-items: center;
+    }
+}
